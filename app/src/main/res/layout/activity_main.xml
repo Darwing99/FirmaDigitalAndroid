@@ -19,9 +19,11 @@
 
         </LinearLayout>
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <EditText
                 android:id="@+id/descripcion"
                 android:layout_gravity="center"
@@ -30,23 +32,55 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="44dp"
-                android:text="Hello World!"
+
                 app:layout_constraintHorizontal_bias="0.449"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:autofillHints=""
                 tools:ignore="LabelFor" />
-            <Button
-                android:id="@+id/guardar"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/cardview_compat_inset_shadow"
-                android:background="@color/black"
-                android:textColor="@color/white"
-                android:layout_height="wrap_content"
-                android:text="Guardar">
-            </Button>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/guardar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                    android:background="@color/black"
+                    android:text="Guardar"
+                    android:textColor="@color/white"
+
+                    app:layout_constraintEnd_toStartOf="@+id/limpiar"
+                    app:layout_constraintHorizontal_bias="0.375"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="33dp"></Button>
+
+                <Button
+                    android:id="@+id/limpiar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                    android:background="@color/black"
+                    android:text="Limpiar"
+
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.751"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="33dp"></Button>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
 
 

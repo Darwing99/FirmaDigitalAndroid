@@ -26,8 +26,19 @@ public class CaptureImageView extends View {
     private Paint _paint;
     private float _mX;
     private float _mY;
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public  boolean status=false;
     private float TouchTolerance = 4;
     private float LineThickness = 4;
+
     public CaptureImageView(Context context, AttributeSet attr) {
         super(context, attr);
         _Path = new Path();
@@ -81,6 +92,7 @@ public class CaptureImageView extends View {
     }
     @Override
     public boolean onTouchEvent(MotionEvent e) {
+        status=true;
         super.onTouchEvent(e);
         float x = e.getX();
         float y = e.getY();
@@ -102,7 +114,8 @@ public class CaptureImageView extends View {
     }
     public void ClearCanvas() {
         _Canvas.drawColor(Color.WHITE);
-        //_Canvas.drawColor(Color.argb(255, 237, 239, 250));
+        //_Canvas.drawColor(Color.argb(255, 237, 239, 250));\
+        status=false;
         invalidate();
     }
     public byte[] getBytes() {

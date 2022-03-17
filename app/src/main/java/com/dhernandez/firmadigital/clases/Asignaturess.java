@@ -1,20 +1,27 @@
 package com.dhernandez.firmadigital.clases;
 
-import java.sql.Blob;
-
 public class Asignaturess {
+    public int id;
     public  String descripcion;
-    public Blob firmadigital;
-    public Asignaturess(String descripcion,Blob firmadigital){
+    public byte[] firmadigital;
+    public Asignaturess(int id,String descripcion, byte[] firmadigital){
+        this.id=id;
         this.descripcion=descripcion;
         this.firmadigital=firmadigital;
+    }
+    public Asignaturess(){
+
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getDescripcion() {
         return descripcion;
     }
 
-    public Blob getFirmadigital() {
+    public byte[] getFirmadigital() {
         return firmadigital;
     }
 }
