@@ -28,6 +28,7 @@ public class List_Firmas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setTitle("Lista de firmas digitales");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         sql=new ConexionSQLite(this);
         setContentView(R.layout.activity_list_firmas);

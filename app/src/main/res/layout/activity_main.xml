@@ -8,10 +8,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Agregue firma digital"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
 
 
         <LinearLayout
+
             android:layout_gravity="center"
+            android:elevation="10dp"
+            android:tooltipText="Espacio para firma"
+            android:outlineAmbientShadowColor="@color/black"
+            android:background="@color/white"
+            android:layout_margin="20dp"
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="300dp"
@@ -32,7 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="44dp"
-
+                android:focusable="true"
+                android:hint="Descripcion"
                 app:layout_constraintHorizontal_bias="0.449"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
